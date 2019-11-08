@@ -1,0 +1,20 @@
+.hisimg{
+    width: 1000px;
+}
+.phimg{
+    padding: 15px;
+}
+.text1
+{
+    text-align: center;
+}
+.text{
+    text-align: left;
+    word-spacing: 10px;
+}
+.context{
+    margin-left: 200px;
+    margin-right:200px ;
+    margin-top: 50px;;
+    margin-bottom: 200px;
+}

@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+footer {
+    background-color: #47a3da;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    clear: both;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 160px;
+    width: 100%;
+    
+    
+  }
+  .imgl{
+      width: 150px;
+  }
+  html {
+    position: relative;
+    min-height: 100%;
+}

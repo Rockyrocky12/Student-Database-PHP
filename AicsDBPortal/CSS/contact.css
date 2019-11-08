@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+  }
+  .row{
+    margin: 100px;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; 
+  }
+  
+ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .imgsoc{
+      width: 200px;
+  }
+  .thead{
+    text-align: center;
+}
+.imgsoc1{
+    width: 100px;
+}
+.imgcon1{
+    
+    padding: 25px;
+}
