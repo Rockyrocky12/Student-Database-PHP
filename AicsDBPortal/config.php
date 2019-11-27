@@ -1,7 +1,7 @@
 <?php
 
 $databaseHost = 'localhost';
-$databaseName = 'registration';
+$databaseName = 'three';
 $databaseUsername = 'root';
 $databasePassword = '';
 

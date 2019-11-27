@@ -1,7 +1,7 @@
 <?php
 
 $databaseHost = 'localhost';
-$databaseName = 'crud';
+$databaseName = 'three';
 $databaseUsername = 'root';
 $databasePassword = '';
 

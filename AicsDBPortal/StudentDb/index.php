@@ -3,7 +3,7 @@
 	if (isset($_GET['edit'])) {
 		$id = $_GET['edit'];
 		$update = true;
-		$record = mysqli_query($db, "SELECT * FROM info WHERE id=$id");
+		$record = mysqli_query($db, "SELECT * FROM sinfo WHERE id=$id");
 
 		if (count($record) == 1 ) {
 			$n = mysqli_fetch_array($record);
@@ -24,7 +24,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-	<title>Home</title>
+	<title>Student's Database</title>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -143,7 +143,7 @@
                      ?>
                     </div>
              <?php endif ?>
-        <?php $results = mysqli_query($db, "SELECT * FROM info"); ?>
+        <?php $results = mysqli_query($db, "SELECT * FROM stinfo"); ?>
 
                 <form method="post" action="server.php" >
 
@@ -155,7 +155,7 @@
                 </div>
                 <div class="input-group">
                     <label>Grade Level</label>
-                    <input type="number" name="gradelvl" value="<?php echo $gradelvl; ?>">
+                    <input type="text" name="gradelvl"  maxlength="2" value="<?php echo $gradelvl; ?>">
                 </div>
                 <div class="input-group">
                     <label>Strand</label>
@@ -167,15 +167,15 @@
                 </div>
                 <div class="input-group">
                     <label>Contact Number</label>
-                    <input type="text" name="contactnum" value="<?php echo $contactnum; ?>">
+                    <input type="text" name="contactnum" maxlength="11" name="contactnum" maxlength="11" value="<?php echo $contactnum; ?>">
                 </div>
                 <div class="input-group">
                     <label>Age</label>
-                    <input type="text" name="age" value="<?php echo $age; ?>">
+                    <input type="number" name="age" value="<?php echo $age; ?>">
                 </div>
                 <div class="input-group">
                     <label>Birthyear</label>
-                    <input type="number" name="birth" value="<?php echo $birth; ?>">
+                    <input type="date" name="birth" value="<?php echo $birth; ?>">
                 </div>
                 <div class="input-group">
                     <label>Father's Name</label>

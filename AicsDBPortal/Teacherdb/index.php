@@ -3,7 +3,7 @@
 	if (isset($_GET['edit'])) {
 		$id = $_GET['edit'];
 		$update = true;
-		$record = mysqli_query($db, "SELECT * FROM info1 WHERE id=$id");
+		$record = mysqli_query($db, "SELECT * FROM tinfo WHERE id=$id");
 
 		if (count($record) == 1 ) {
 			$n = mysqli_fetch_array($record);
@@ -35,7 +35,7 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 <body>
-        <?php $results = mysqli_query($db, "SELECT * FROM info1"); ?>
+        <?php $results = mysqli_query($db, "SELECT * FROM tinfo"); ?>
 
         <div class="container">
 			<header class="clearfix">
@@ -144,11 +144,11 @@
                 </div>
                 <div class="input-group">
                     <label>Grade Level</label>
-                    <input type="number" name="gradelvl" value="<?php echo $gradelvl; ?>">
+                    <input type="text" name="gradelvl"  maxlength="2" placeholder="1 - 12" value="<?php echo $gradelvl; ?>">
                 </div>
                 <div class="input-group">
                     <label>Contact Number</label>
-                    <input type="number" name="contactnum" value="<?php echo $contactnum; ?>">
+                    <input type="text" name="contactnum" maxlength="11" value="<?php echo $contactnum; ?>">
                 </div>
                 <div class="input-group">
                     <label>Age</label>
@@ -156,10 +156,10 @@
                 </div>
                 <div class="input-group">
                     <label>Birthyear</label>
-                    <input type="number" name="birth" value="<?php echo $birth; ?>">
+                    <input type="date" name="birth" value="<?php echo $birth; ?>">
                 </div>
                 <div class="input-group">
-                    <label>Position</label>
+                    <label>Teacher Level</label>
                     <input type="text" placeholder="ex: Teacher I" name="position" value="<?php echo $position; ?>">
                 </div>
                 <div class="input-group">

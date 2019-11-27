@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	$db = mysqli_connect('localhost', 'root', '', 'teacher');
+	$db = mysqli_connect('localhost', 'root', '', 'three');
 
 	// initialize variables
 	$name = "";
@@ -27,7 +27,7 @@
 		$position = $_POST['position'];
 		$email = $_POST['email'];
 
-		mysqli_query($db, "INSERT INTO info1  (name, gradelvl, contactnum, age, birth, position, email ) VALUES ('$name', '$gradelvl', '$contactnum', '$age', '$birth', '$position', '$email')"); 
+		mysqli_query($db, "INSERT INTO tinfo  (name, gradelvl, contactnum, age, birth, position, email ) VALUES ('$name', '$gradelvl', '$contactnum', '$age', '$birth', '$position', '$email')"); 
 		$_SESSION['message'] = "Information saved"; 
 		header('location: index.php');
 	}
@@ -40,13 +40,13 @@
 		$position = $_POST['position'];
 		$email = $_POST['email'];
 	
-		mysqli_query($db, "UPDATE info1 SET name='$name', gradelvl='$gradelvl', contactnum='$contactnum', age='$age' , birth='$birth', position='$position', email='$email' WHERE id=$id");
+		mysqli_query($db, "UPDATE tinfo SET name='$name', gradelvl='$gradelvl', contactnum='$contactnum', age='$age' , birth='$birth', position='$position', email='$email' WHERE id=$id");
 		$_SESSION['message'] = "Information Updated!"; 
 		header('location: index.php');
 	}
 	if (isset($_GET['del'])) {
 		$id = $_GET['del'];
-		mysqli_query($db, "DELETE FROM info1 WHERE id=$id");
+		mysqli_query($db, "DELETE FROM tinfo WHERE id=$id");
 		$_SESSION['message'] = "Informations deleted!"; 
 		header('location: index.php');
 	}
